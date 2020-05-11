@@ -8,6 +8,8 @@ SilverStripe\View\SSViewer:
   themes:
     - '$public'
     - '$default'
+SilverStripe\CMS\Model\SiteTree:
+  create_default_pages: false
 
 ---
 Name: my-project-assetsflysystem

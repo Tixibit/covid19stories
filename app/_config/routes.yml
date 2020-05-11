@@ -5,3 +5,11 @@ After: framework/_config/routes#coreroutes
 SilverStripe\Control\Director:
   rules:
     '': 'App\HomeController'
+    'about//$Action/$ID/$OtherID': 'App\AboutController'
+    'stories//$Action/$ID/$OtherID': 'App\StoriesController'
+    'forums//$Action/$ID/$OtherID': 'App\ForumController'
+    'tell-your-story//$Action/$ID/$OtherID': 'App\SubmitStoryController'
+    'terms-and-conditions': 'App\TermsController'
+    'privacy-policy': 'App\PrivacyController'
+    'register': 'App\MemberRegistrationController'
+

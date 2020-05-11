@@ -59,15 +59,17 @@ class FetchTwitterDataTask extends BuildTask
         $twitterData = new TwitterAPIService();
         if ($searchTerms = $this->getMLSearchTerms()) {
             foreach ($searchTerms as $searchTerm) {
-                $statuses = $twitterData->searchTweets($searchTerm->Title, 25);
+                $statuses = $twitterData->searchTweets($searchTerm->Title, 200);
                 if ($statuses) {
                     foreach ($statuses as $status) {
-                        $rawStory = new RawCOVIDStory();
-                        $rawStory->SourceID = $status->id_st;
-                        $rawStory->Type = COVIDStory::TWITTER_STORY_TYPE;
-                        $rawStory->Data = serialize($status);
-                        $rawStory->write();
-                        $this->noOfStoriesFetchedAndCreated++;
+                        if (!RawCOVIDStory::get()->filter('SourceID', $status->id_str)->first()) {
+                            $rawStory = new RawCOVIDStory();
+                            $rawStory->SourceID = $status->id_str;
+                            $rawStory->Type = COVIDStory::TWITTER_STORY_TYPE;
+                            $rawStory->Data = json_encode($status);
+                            $rawStory->write();
+                            $this->noOfStoriesFetchedAndCreated++;
+                        }
                     }
                 }
             }

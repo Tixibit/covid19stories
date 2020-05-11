@@ -42,7 +42,7 @@ class COVIDStory extends DataObject
         'Title' => 'Varchar(255)',
         'DateAdded' => DBDatetime::class,
         'Position' => DBInt::class,
-        'Type' => "Enum('Twitter, Youtube, Instagram', null)",
+        'Type' => "Enum('Twitter, Youtube, Instagram, OnSite', null)",
         'Content' => DBHTMLText::class,
         'User' => DBVarchar::class,
         'SourceURL' => 'Varchar(255)',

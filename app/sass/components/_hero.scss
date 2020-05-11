@@ -1,0 +1,16 @@
+/*
+* Hero Section
+*/
+
+.home-hero{
+    @include media-breakpoint-up(xl) {
+        .umbotron-heading{
+            padding-top: 40px;
+        }
+        background-image: url('/images/globe-dotted.svg');
+        background-repeat: no-repeat;
+        background-position: 95% 25%;
+        min-height: 500px;
+    }
+
+}

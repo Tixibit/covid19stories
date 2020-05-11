@@ -13,6 +13,12 @@ class HomeController extends BaseController
     protected function init()
     {
         parent::init();
+
+        $rawStories = RawCOVIDStory::get();
+        // foreach ($rawStories as $story) {
+        //     Debug::dump(json_decode($story->Data)->text);
+        // }
+        // exit();
     }
 
     public function index(HTTPRequest $request)

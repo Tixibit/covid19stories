@@ -66,14 +66,14 @@ class TwitterAPIService implements iTwitterAPIService
         }
 
         // Call rest api
-        $arguments = http_build_query(array(
+        $params = [
             'screen_name' => $user,
             'count' => $count,
-            //'include_rts' => SiteConfig::current_site_config()->TwitterIncludeRTs,
-            //'exclude_replies' => SiteConfig::current_site_config()->TwitterExcludeReplies,
-        ));
+            'include_rts' => false,
+            'exclude_replies' => false,
+        ];
         $connection = $this->getConnection();
-        $response = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?$arguments");
+        $response = $connection->get("statuses/user_timeline", $params);
 
         // Parse all tweets
         $tweets = array();
@@ -91,18 +91,18 @@ class TwitterAPIService implements iTwitterAPIService
         $tweets = array();
         if (!empty($query)) {
             // Call rest api
-            $arguments = [
+            $params = [
                 'q' => $query,
                 'count' => $count,
-                'include_rts' => true,
+                'include_rts' => false,
             ];
             $connection = $this->getConnection();
-            $response = $connection->get("search/tweets", $arguments);
+            $response = $connection->get("search/tweets", $params);
 
             // Parse all tweets
             if ($response) {
                 foreach ($response->statuses as $tweet) {
-                    $tweets[] = $this->parseTweet($tweet);
+                    $tweets[] = $tweet; // $this->parseTweet($tweet);
                 }
             }
         }

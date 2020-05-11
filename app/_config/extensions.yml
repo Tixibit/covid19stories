@@ -4,3 +4,7 @@ Name: extensions
 BaseController:
   extensions:
     - 'App\TwitterExtension'
+
+SilverStripe\Security\Member:
+  extensions:
+    - 'App\MemberDataExtension'

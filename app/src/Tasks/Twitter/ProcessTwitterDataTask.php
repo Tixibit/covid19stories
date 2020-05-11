@@ -31,7 +31,7 @@ class ProcessTwitterDataTasks extends BuildTask
      */
     protected $description = 'Processing fetched twitter data';
 
-    private $noOfStoriesFetchedAndCreated = 0;
+    private $noOfStoriesProcessed = 0;
 
     /**
      * Implement this method in the task subclass to
@@ -43,11 +43,15 @@ class ProcessTwitterDataTasks extends BuildTask
     public function run($request)
     {
         $this->fetchTwitterDataForProcessing();
-        echo 'Finished creating' . $this->noOfStoriesFetchedAndCreated . ' COVID-19 stories based on our search terms';
+        echo 'Finished processings ' . $this->noOfStoriesFetchedAndCreated . ' COVID-19 stories based on our search terms';
     }
 
     private function processFetchedData()
     {
         $rawStories = RawCOVIDStory::get();
+
+        foreach ($rawStories as $rawStory) {
+
+        }
     }
 }

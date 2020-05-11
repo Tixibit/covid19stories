@@ -16,26 +16,31 @@
                         <a class="nav-link" href="$BaseHref">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Stories</a>
+                        <a class="nav-link" href="/stories">Stories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Community Forum</a>
+                        <a class="nav-link" href="/forums">Community Forum</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Other Resources
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+                            <a class="dropdown-item" target="_blank" href="/https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a>
+                            <a class="dropdown-item" target="_blank" href="https://coronavirus.jhu.edu/map.html">John Hopkins</a>
                     </li>
                 </ul>
-                <div class="my-2 my-lg-0">
-                    <a class="btn btn-success my-2 my-sm-0" href="tell-your-story">Tell Your COVID-19 Story</a>
-                </div>
+                <ul class="navbar-nav my-2 ml-auto my-lg-0">
+                    <li class="nav-item mr-2">
+                        <a class="nav-link" href="/register">Register / Login </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-success my-2 my-sm-0" href="/tell-your-story">Tell Your COVID-19 Story</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>

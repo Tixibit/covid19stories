@@ -1,3 +1,13 @@
 /*
 * Primary Layout Elements
 */
+
+//footer
+.site-footer{
+    background-color: #efefef;
+}
+.main-content{
+   min-height: 70vh;
+   padding-bottom: 50px;
+   background-color: $white;
+}
