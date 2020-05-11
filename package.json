@@ -1,7 +1,7 @@
 {
-  "name": "tixibit20",
+  "name": "covid-19-stories",
   "version": "1.0.0",
-  "description": "Base project folder for the Tixibit site.",
+  "description": "Opensource app that gathers data from social media and shows what people say about thier experiences with Covid-19.",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",

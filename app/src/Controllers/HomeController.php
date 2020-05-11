@@ -10,6 +10,11 @@ class HomeController extends BaseController
         'index',
     ];
 
+    protected function init()
+    {
+        parent::init();
+    }
+
     public function index(HTTPRequest $request)
     {
         return [];

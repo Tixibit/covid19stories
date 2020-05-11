@@ -1,0 +1,6 @@
+---
+Name: extensions
+---
+BaseController:
+  extensions:
+    - 'App\TwitterExtension'

@@ -1,9 +1,5 @@
-let mix = require("laravel-mix");
+let mix = require('laravel-mix');
 
-const theme = "./themes/businesso";
-const jsSrc = `${theme}/src/js/app.js`;
-const scssSrc = `${theme}/src/scss/app.scss`;
-const distFolder = `${theme}/dist`;
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -15,11 +11,12 @@ const distFolder = `${theme}/dist`;
  |
  */
 
-mix.sourceMaps(); // Enable sourcemaps
+mix.sass('app/sass/app.scss', 'dist/')
+    .js('app/js/app.js', 'dist/')
+    .setPublicPath('./public')
+    .extract();
 
-mix.js(jsSrc, distFolder)
-    .sass(scssSrc, distFolder)
-    .setPublicPath(theme);
+mix.sourceMaps(); // Enable sourcemaps
 
 // Full API
 // mix.js(src, output);
