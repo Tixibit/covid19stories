@@ -9,5 +9,6 @@
 </section>
 
 <div class="container">
+    <h2>Please register using the form below<h2>
     $RegistrationForm
 </div>
