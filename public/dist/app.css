@@ -10925,3 +10925,11 @@ a.text-dark:focus {
   color: #ddd;
 }
 
+form .action {
+  margin-right: 15px;
+}
+
+form .btn-toolbar {
+  padding-top: 30px;
+}
+
