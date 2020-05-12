@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cee5d5fd877172120a420d26bf553075",
+    "content-hash": "643ed40d9130766b04f14867a6567ebc",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -2025,6 +2025,52 @@
             "time": "2018-04-11T07:22:09+00:00"
         },
         {
+            "name": "silverstripe/siteconfig",
+            "version": "4.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
+                "reference": "b9a624f57c187dc6d6f70a386775e1a58557489b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/b9a624f57c187dc6d6f70a386775e1a58557489b",
+                "reference": "b9a624f57c187dc6d6f70a386775e1a58557489b",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/admin": "^1.5",
+                "silverstripe/framework": "^4.5",
+                "silverstripe/vendor-plugin": "^1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\SiteConfig\\": "code/",
+                    "SilverStripe\\SiteConfig\\Tests\\": "tests/php/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "Site wide settings administration.",
+            "keywords": [
+                "silverstripe",
+                "siteconfig"
+            ],
+            "time": "2020-02-17T01:44:40+00:00"
+        },
+        {
             "name": "silverstripe/spamprotection",
             "version": "3.0.2",
             "source": {
@@ -3756,52 +3802,6 @@
                 "silverstripe"
             ],
             "time": "2019-08-21T21:28:23+00:00"
-        },
-        {
-            "name": "silverstripe/siteconfig",
-            "version": "4.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
-                "reference": "b9a624f57c187dc6d6f70a386775e1a58557489b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/b9a624f57c187dc6d6f70a386775e1a58557489b",
-                "reference": "b9a624f57c187dc6d6f70a386775e1a58557489b",
-                "shasum": ""
-            },
-            "require": {
-                "silverstripe/admin": "^1.5",
-                "silverstripe/framework": "^4.5",
-                "silverstripe/vendor-plugin": "^1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7"
-            },
-            "type": "silverstripe-vendormodule",
-            "autoload": {
-                "psr-4": {
-                    "SilverStripe\\SiteConfig\\": "code/",
-                    "SilverStripe\\SiteConfig\\Tests\\": "tests/php/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Will Rossiter",
-                    "email": "will@fullscreen.io"
-                }
-            ],
-            "description": "Site wide settings administration.",
-            "keywords": [
-                "silverstripe",
-                "siteconfig"
-            ],
-            "time": "2020-02-17T01:44:40+00:00"
         },
         {
             "name": "symfony/var-dumper",

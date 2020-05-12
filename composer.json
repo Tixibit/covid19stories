@@ -15,7 +15,8 @@
         "google/apiclient": "^2.4",
         "undefinedoffset/silverstripe-nocaptcha": "^2.0",
         "axllent/silverstripe-bootstrap-forms": "^2.0",
-        "silverstripe/admin": "^1.5"
+        "silverstripe/admin": "^1.5",
+        "silverstripe/siteconfig": "^4.5"
     },
     "require-dev": {
         "lekoala/silverstripe-debugbar": "^2.0",
