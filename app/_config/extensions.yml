@@ -1,5 +1,5 @@
 ---
-Name: extensions
+Name: c19storiesextensions
 ---
 BaseController:
   extensions:
