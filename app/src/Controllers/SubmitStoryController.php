@@ -13,6 +13,7 @@ class SubmitStoryController extends BaseController
 
     private static $allowed_actions = [
         'index',
+        'AddCovidStroyForm',
     ];
 
     protected function init()
@@ -24,6 +25,17 @@ class SubmitStoryController extends BaseController
     {
         return [
             'PageTitle' => 'Tell Your Story',
+            'addCovidStroyForm' => $this->AddCovidStroyForm(),
         ];
+    }
+
+    /**
+     * Register Form
+     *
+     * @return MemberRegistrationForm
+     */
+    public function addCovidStroyForm()
+    {
+        return new AddCovidStroyForm($this, __FUNCTION__);
     }
 }

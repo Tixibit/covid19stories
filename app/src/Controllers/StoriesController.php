@@ -28,6 +28,9 @@ class StoriesController extends BaseController
         ];
     }
 
+    /**
+     * Get Stories submitted to twitter
+     */
     public function getStoriesFromTwitter($limit = 50)
     {
         $rawStories = RawCOVIDStory::get()->limit($limit);
@@ -37,5 +40,17 @@ class StoriesController extends BaseController
             $list->push(['Text' => $data->text]);
         }
         return $list;
+    }
+
+    /**
+     * Get Stories submitted to this site
+     *
+     * @param integer $limit
+     * @return void
+     */
+    public function getStoriesOnThisSite($limit = 50)
+    {
+        $onSiteStories = COVIDStory::get()->filter('Type', 'OnSite')->limit($limit);
+        return $onSiteStories;
     }
 }

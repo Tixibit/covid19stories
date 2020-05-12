@@ -20,5 +20,7 @@
         <p>
             <a class="btn btn-info my-2 my-sm-0" href="/Security/login?BackURL=/tell-your-story">Login</a>
     </div>
+    <% else %>
+    $addCovidStroyForm
     <% end_if %>
 </div>
