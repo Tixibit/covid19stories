@@ -8,3 +8,6 @@ BaseController:
 SilverStripe\Security\Member:
   extensions:
     - 'App\MemberDataExtension'
+SilverStripe\Security\Security:
+  extensions:
+    - 'App\SecurityExtension'

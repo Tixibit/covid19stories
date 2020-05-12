@@ -3,12 +3,14 @@
         <h1 class="jumbotron-heading text-bold">
           Member Registration Or Login
         </h1>
-        <%-- <p class="lead text-muted">Something short and leading about the collection below—its contents.</p> --%>
+        <p class="text-muted-light">Please register using the form below</p>
 
     </div>
 </section>
 
 <div class="container">
-    <h2>Please register using the form below (TODO)<h2>
+    <p>
+    Do you have an account? Login <a href="/Security/login">here</a> instead.
+    </p>
     $RegistrationForm
 </div>

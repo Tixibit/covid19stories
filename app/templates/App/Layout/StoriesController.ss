@@ -3,7 +3,7 @@
         <h1 class="jumbotron-heading text-bold">
          Stories
         </h1>
-        <p class="lead text-muted">
+        <p class="text-muted-light">
             Stories and real experiences from people affected by COVID-19
         </p>
 

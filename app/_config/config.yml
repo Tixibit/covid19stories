@@ -11,6 +11,9 @@ SilverStripe\View\SSViewer:
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
 
+SilverStripe\Security\Security:
+  template_main: 'BaseController'
+  default_login_dest: '/'
 ---
 Name: c19stories-assetsflysystem
 After: '#assetsflysystem'

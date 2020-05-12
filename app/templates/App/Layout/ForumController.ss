@@ -3,7 +3,7 @@
         <h1 class="jumbotron-heading text-bold">
         Forums
         </h1>
-        <p class="lead text-muted">
+        <p class="text-muted-light">
             A place for the community to get together and discuss COVID-19 as it is affecting their lives.
         </p>
 

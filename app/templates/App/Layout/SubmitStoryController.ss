@@ -3,7 +3,7 @@
         <h1 class="jumbotron-heading text-bold">
          Tell Your COVID-19 Story
         </h1>
-        <p class="lead text-muted">
+        <p class="text-muted-light">
             The stories on this website are collected automatically from social media and made available on this website.
             However, you can also submit your own story on this page
         </p>
