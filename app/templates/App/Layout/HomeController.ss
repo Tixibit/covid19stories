@@ -26,24 +26,25 @@
             prioritised using machine learning and other means. Users can also register with an account and add their own COVID-19 stories to this site</p>
         </div>
         <div class="col-md-4">
-            <h5>User Data by Geographic Region ((Not Complete)</h5>
+            <h5>User Data by Geographic Region (Not Complete)</h5>
             <p>User submitted data can be grouped and listed by geographic region. This has the added
             advantage of researching the signs and symptoms of COVID-19 by region.</p>
         </div>
          <div class="col-md-4">
-            <h5>Data Engagment ((Not Complete)</h5>
+            <h5>Data Engagment (Not Complete)</h5>
             <p>Users with registered accounts will be able to rate certain stories higher
             and those will get great visibility and the will also be able to save stories to viewing later and that will be a great advantage for research</p>
         </div>
 
          <div class="col-md-4 mt-3">
-            <h5>Community Forums  ((Not Complete)</h5>
+            <h5>Community Forums  (Not Complete)</h5>
             <p>Forums are a great addition to any community site. On this site, the forums will serve as a place for users to engage in discussions and share information </p>
         </div>
 
         <div class="col-md-4 mt-3">
-            <h5>Community Forums  ((Not Complete)</h5>
-            <p>Forums are a great addition to any community site. On this site, the forums will serve as a place for users to engage in discussions and share information </p>
+            <h5>Following Stories  (Not Complete)</h5>
+            <p>Users following stories from certain countries or geopraphic regions can will get notified via email when new stories get published in those
+            regions talking about their COVID-19 experiences.</p>
         </div>
 
     </div>
