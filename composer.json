@@ -14,7 +14,8 @@
         "abraham/twitteroauth": "^1.1",
         "google/apiclient": "^2.4",
         "undefinedoffset/silverstripe-nocaptcha": "^2.0",
-        "axllent/silverstripe-bootstrap-forms": "^2.0"
+        "axllent/silverstripe-bootstrap-forms": "^2.0",
+        "silverstripe/admin": "^1.5"
     },
     "require-dev": {
         "lekoala/silverstripe-debugbar": "^2.0",

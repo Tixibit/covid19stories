@@ -12,7 +12,7 @@ SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
 
 ---
-Name: my-project-assetsflysystem
+Name: c19stories-assetsflysystem
 After: '#assetsflysystem'
 ---
 # SilverStripe 4.4 changes the way files are resolved. `silverstripe-assets` resolves files using a variety of formats

@@ -92,9 +92,12 @@ class TwitterAPIService implements iTwitterAPIService
         if (!empty($query)) {
             // Call rest api
             $params = [
-                'q' => $query,
+                'q' => $query . ' -filter:retweets',
                 'count' => $count,
-                'include_rts' => false,
+                // 'exclude_replies' => true,
+                // 'include_rts' => false,
+                '-filter' => 'nativeretweets',
+                '-filter' => 'replies',
             ];
             $connection = $this->getConnection();
             $response = $connection->get("search/tweets", $params);
