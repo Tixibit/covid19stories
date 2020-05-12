@@ -6,6 +6,11 @@ use SilverStripe\Control\HTTPRequest;
 
 class PrivacyController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'privacy-policy';
+
     private static $allowed_actions = [
         'index',
     ];
@@ -17,11 +22,8 @@ class PrivacyController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
-    }
-
-    public function getPageTitle()
-    {
-        return 'Privacy Policy';
+        return [
+            'PageTitle' => 'Privacy Policy',
+        ];
     }
 }

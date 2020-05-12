@@ -6,6 +6,11 @@ use SilverStripe\Control\HTTPRequest;
 
 class SubmitStoryController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'tell-your-story';
+
     private static $allowed_actions = [
         'index',
     ];
@@ -17,11 +22,8 @@ class SubmitStoryController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
-    }
-
-    public function getPageTitle()
-    {
-        return 'Tell Your Story';
+        return [
+            'PageTitle' => 'Tell Your Story',
+        ];
     }
 }

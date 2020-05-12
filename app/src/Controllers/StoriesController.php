@@ -7,6 +7,11 @@ use SilverStripe\ORM\ArrayList;
 
 class StoriesController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'stories';
+
     private static $allowed_actions = [
         'index',
     ];
@@ -18,12 +23,9 @@ class StoriesController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
-    }
-
-    public function getPageTitle()
-    {
-        return 'Stories';
+        return [
+            'PageTitle' => 'Stories',
+        ];
     }
 
     public function getStoriesFromTwitter($limit = 50)
@@ -33,7 +35,6 @@ class StoriesController extends BaseController
         foreach ($rawStories as $story) {
             $data = json_decode($story->Data);
             $list->push(['Text' => $data->text]);
-
         }
         return $list;
     }

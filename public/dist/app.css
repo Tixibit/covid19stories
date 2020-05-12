@@ -10933,3 +10933,7 @@ form .btn-toolbar {
   padding-top: 30px;
 }
 
+form .message.validation {
+  color: red;
+}
+

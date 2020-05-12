@@ -5,6 +5,7 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\ORM\DB;
 use SilverStripe\ORM\FieldType\DBVarchar;
 use SilverStripe\Security\Group;
+use SilverStripe\Security\Member;
 
 class MemberDataExtension extends DataExtension
 {
@@ -15,6 +16,29 @@ class MemberDataExtension extends DataExtension
     private static $has_many = [
         'COVIDStories' => COVIDStory::class,
     ];
+
+    /**
+     * Member Email is unique
+     * Check that this members email address is unique
+     * @param [type] $email
+     * @param boolean $editMode
+     * @param string $memberID
+     * @return void
+     */
+    public function memberEmailIsUnique($email, $editMode = false, $memberID = '')
+    {
+        if ($editMode == false) {
+            if (Member::get()->filter('Email', $email)->first()) {
+                return true;
+            }
+            return false;
+        } else {
+            if (Member::get()->filter('Email', $email)->exclude('ID', $memberID)->first()) {
+                return true;
+            }
+            return false;
+        }
+    }
 
     /**
      * Add default records to database. This function is called whenever the

@@ -6,6 +6,11 @@ use SilverStripe\Control\HTTPRequest;
 
 class TermsController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'terms-and-conditions';
+
     private static $allowed_actions = [
         'index',
     ];
@@ -17,11 +22,9 @@ class TermsController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
+        return [
+            'PageTitle' => 'Terms and Conditions',
+        ];
     }
 
-    public function getPageTitle()
-    {
-        return 'Privacy Policy';
-    }
 }

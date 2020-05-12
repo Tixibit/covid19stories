@@ -1,15 +1,19 @@
 <?php
 namespace App;
 
-use SilverStripe\Forms\CheckboxSetField;
-use SilverStripe\Forms\CompositeField;
+use SilverStripe\Control\Controller;
+use SilverStripe\Core\Convert;
+use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Forms\ConfirmedPasswordField;
+use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\FormAction;
-use SilverStripe\Forms\HeaderField;
-use SilverStripe\Forms\NumericField;
-use SilverStripe\Forms\OptionsetField;
 use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Security\IdentityStore;
+use SilverStripe\Security\Member;
+use SilverStripe\SiteConfig\SiteConfig;
 
 class MemberRegistrationForm extends Form
 {
@@ -20,36 +24,20 @@ class MemberRegistrationForm extends Form
      */
     public function __construct($controller, $name)
     {
-        $fields = new FieldList(
-            HeaderField::create('Header', 'Step 1. Basics'),
-            OptionsetField::create('Type', '', [
-                'foo' => 'Search Foo',
-                'bar' => 'Search Bar',
-                'baz' => 'Search Baz',
-            ]),
-
-            CompositeField::create(
-                HeaderField::create('Header2', 'Step 2. Advanced '),
-                CheckboxSetField::create('Foo', 'Select Option', [
-                    'qux' => 'Search Qux',
-                ]),
-
-                CheckboxSetField::create('Category', 'Category', [
-                    'Foo' => 'Foo',
-                    'Bar' => 'Bar',
-                ]),
-
-                NumericField::create('Minimum', 'Minimum'),
-                NumericField::create('Maximum', 'Maximum')
-            )
+        $fields = FieldList::create(
+            TextField::create('Nickname'),
+            TextField::create('FirstName', 'First Name'),
+            TextField::create('Surname', 'Last Name'),
+            EmailField::create('Email'),
+            ConfirmedPasswordField::create('Password')
         );
 
         $actions = new FieldList(
-            FormAction::create('doSearchForm', 'Search')
+            FormAction::create('doRegister', 'Register')
         );
 
         $required = new RequiredFields([
-            'Type',
+            'FirstName', 'Surname', 'Email', 'Password',
         ]);
 
         // now we create the actual form with our fields and actions defined
@@ -57,10 +45,44 @@ class MemberRegistrationForm extends Form
         parent::__construct($controller, $name, $fields, $actions, $required);
 
         // any modifications we need to make to the form.
-        $this->setFormMethod('GET');
+        $this->setFormMethod('POST');
 
         $this->addExtraClass('no-action-styles');
-        $this->disableSecurityToken();
         $this->loadDataFrom($_REQUEST);
+    }
+
+    /**
+     * Do register
+     *
+     * @param [type] $data
+     * @param [type] $form
+     * @return void
+     */
+    public function doRegister($data, $form)
+    {
+        $data = Convert::raw2sql($data);
+        $controller = Controller::curr();
+        $member = new Member();
+
+        //check and make sure that a user with this email address doenst already exist
+        $checkMemberEmail = $member->memberEmailIsUnique($data['Email']);
+        if ($checkMemberEmail) {
+            // Add a error message
+            $form->sessionMessage('Ops, a user with that email address already exits. Please choose another one', "alert alert-danger");
+            return $controller->redirectBack();
+        }
+
+        $form->saveInto($member);
+        //$member->sendMemberWelcomeMail();
+        $member->write();
+        //Add this member to the  to tBAccount group and log this member in
+        $member->addToGroupByCode("Member");
+        //$member->sendMemberWelcomeMail();
+        Injector::inst()->get(IdentityStore::class)->logIn($member);
+
+        //also mark this member as has signuped
+
+        $controller->setFlashMessage("success", "Congratulations, Welcome to " . SiteConfig::current_site_config()->Title . ". You now access to this and post your COVID-19 Stories.");
+        return $controller->redirect('/');
     }
 }

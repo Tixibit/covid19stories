@@ -6,6 +6,11 @@ use SilverStripe\Control\HTTPRequest;
 
 class ForumController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'forums';
+
     private static $allowed_actions = [
         'index',
     ];
@@ -17,11 +22,8 @@ class ForumController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
-    }
-
-    public function getPageTitle()
-    {
-        return 'Forums';
+        return [
+            'PageTitle' => 'Forums',
+        ];
     }
 }

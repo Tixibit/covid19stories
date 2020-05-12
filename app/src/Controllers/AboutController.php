@@ -6,6 +6,11 @@ use SilverStripe\Control\HTTPRequest;
 
 class AboutController extends BaseController
 {
+    /**
+     * URL Segment used for links
+     */
+    public $url_segment = 'about';
+
     private static $allowed_actions = [
         'index',
     ];

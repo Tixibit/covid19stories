@@ -18,6 +18,7 @@
 </section>
 
 <div class="container">
+    $FlashMessage
     <h4 class="pb-5">Features</h4>
     <div class="row">
         <div class="col-md-4">

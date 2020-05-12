@@ -9,8 +9,13 @@
 </section>
 
 <div class="container">
-    <p>
-    Do you have an account? Login <a href="/Security/login">here</a> instead.
-    </p>
-    $RegistrationForm
+   $FlashMessage
+    <div class="row">
+        <div class="col-lg-5 col-md-7">
+            <p>
+                Do you have an account? Login <a href="/Security/login">here</a> instead.
+            </p>
+            $RegistrationForm
+        </div>
+    </div>
 </div>
