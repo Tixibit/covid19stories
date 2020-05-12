@@ -17,11 +17,8 @@ class MemberRegistrationController extends BaseController
 
     public function index(HTTPRequest $request)
     {
-        return [];
-    }
-
-    public function getPageTitle()
-    {
-        return 'Member Registration';
+        return [
+            'PageTitle' => 'Member Registration',
+        ];
     }
 }

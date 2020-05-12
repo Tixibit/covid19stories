@@ -29,14 +29,26 @@
                             Other Resources
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" target="_blank" href="/https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a>
+                            <a class="dropdown-item" target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a>
                             <a class="dropdown-item" target="_blank" href="https://coronavirus.jhu.edu/map.html">John Hopkins</a>
+                        </div>
                     </li>
                 </ul>
                 <ul class="navbar-nav my-2 ml-auto my-lg-0">
+                     <% if not $CurrentUser %>
                     <li class="nav-item mr-2">
                         <a class="nav-link" href="/register">Register / Login </a>
                     </li>
+                     <% else %>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userLoggedInDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          You are logged in as $CurrentUser.Name
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userLoggedInDropdown">
+                            <a class="dropdown-item" href="/Security/logout">Logout</a>
+                        </div>
+                    </li>
+                     <% end_if %>
                     <li class="nav-item">
                         <a class="btn btn-success my-2 my-sm-0" href="/tell-your-story">Tell Your COVID-19 Story</a>
                     </li>

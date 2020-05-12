@@ -12,5 +12,13 @@
 </section>
 
 <div class="container">
-
+    <% if not $CurrentUser %>
+    <div class="col-md-7">
+        <p>
+        You must be logged in to tell and submit your COVID-19 story. Please login <a href="/Security/login?BackURL=/tell-your-story">here</a>
+        </p>
+        <p>
+            <a class="btn btn-info my-2 my-sm-0" href="/Security/login?BackURL=/tell-your-story">Login</a>
+    </div>
+    <% end_if %>
 </div>
