@@ -17,7 +17,7 @@ Covid-19-stories. This is our submission for the Hackweekend COVID-19 hackthon c
     php ext-xml
     Webserver Eg (Ngnix, Apache2)
 
-#How to install
+# How to install
 Copy the included .env.sample to .env and modify the content with your own values. 
 Run  `composer install`
 Finally navigate to the website to the location you installed it in your browser and go to http://your-installation-url/dev/build
@@ -36,7 +36,7 @@ TWITTER_API_ACCESS_TOKEN="ACCESSTOKENHERE"
 TWITTER_API_ACCESS_SECRET="ACCESSSECRETHERE"
 ```
 
-#How fetch social media data
+# How fetch social media data
 Go to http://your-installation-url/admin and enter some search terms into the 'MLSearchTerms'. You will find this on the admin page sidebar
 
 Finally, go to http://your-installation-url/dev/tasks/fetch-twitter-data-task
