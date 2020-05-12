@@ -7,7 +7,7 @@
             </h1>
             <p class="text-muted-light">
                Many people have lived and recovered through the COVID-19 pandemic.
-               Read and see it in there own words learn and from their experiences
+               Read, see it in there own words and learn from their experiences
             </p>
             <p>
                 <a href="/stories" class="btn btn-primary my-2 mr-2">See Stories</a>
