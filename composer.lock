@@ -1284,16 +1284,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.27",
+            "version": "2.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc"
+                "reference": "233a920cb38636a43b18d428f9a8db1f0a1a08f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc",
-                "reference": "34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/233a920cb38636a43b18d428f9a8db1f0a1a08f4",
+                "reference": "233a920cb38636a43b18d428f9a8db1f0a1a08f4",
                 "shasum": ""
             },
             "require": {
@@ -1301,8 +1301,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
-                "sami/sami": "~2.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
@@ -1386,7 +1385,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-04-04T23:17:33+00:00"
+            "time": "2021-04-06T13:56:45+00:00"
         },
         {
             "name": "psr/cache",
@@ -3747,12 +3746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverleague/silverstripe-ideannotator.git",
-                "reference": "18bf94634edd6bd38b258e329f3b55131370d96f"
+                "reference": "19c1f999879c964852c8474dfb631c57a01995e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverleague/silverstripe-ideannotator/zipball/18bf94634edd6bd38b258e329f3b55131370d96f",
-                "reference": "18bf94634edd6bd38b258e329f3b55131370d96f",
+                "url": "https://api.github.com/repos/silverleague/silverstripe-ideannotator/zipball/19c1f999879c964852c8474dfb631c57a01995e9",
+                "reference": "19c1f999879c964852c8474dfb631c57a01995e9",
                 "shasum": ""
             },
             "require": {
@@ -3768,7 +3767,7 @@
             "type": "silverstripe-vendormodule",
             "extra": {
                 "branch-alias": {
-                    "3.x-dev": "3.1.x-dev",
+                    "3.x-dev": "3.2.x-dev",
                     "dev-master": "3.x-dev"
                 }
             },
@@ -3801,7 +3800,7 @@
                 "orm",
                 "silverstripe"
             ],
-            "time": "2019-08-21T21:28:23+00:00"
+            "time": "2021-02-13T00:03:05+00:00"
         },
         {
             "name": "symfony/var-dumper",
