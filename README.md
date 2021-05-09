@@ -1,5 +1,5 @@
 # covid19stories
-Covid-19-stories. This is our submission for the Hackweekend COVID-19 hackthon challenge.
+Covid-19-stories (https://c19stories.com/). This is our submission for the Hackweekend COVID-19 hackthon challenge.
 
 # Requirements
     php >=7.1.0
